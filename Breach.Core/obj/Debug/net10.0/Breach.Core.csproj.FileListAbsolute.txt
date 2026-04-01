@@ -1,0 +1,11 @@
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/bin/Debug/net10.0/Breach.Core.deps.json
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/bin/Debug/net10.0/Breach.Core.dll
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/bin/Debug/net10.0/Breach.Core.pdb
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/Breach.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/Breach.Core.AssemblyInfoInputs.cache
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/Breach.Core.AssemblyInfo.cs
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/Breach.Core.csproj.CoreCompileInputs.cache
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/Breach.Core.dll
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/refint/Breach.Core.dll
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/Breach.Core.pdb
+/Users/amitreuveni/RiderProjects/Breach/Breach.Core/obj/Debug/net10.0/ref/Breach.Core.dll
