@@ -19,6 +19,7 @@ internal static class Renderer
         PrintBoard(state);
         Console.WriteLine();
         PrintPlayerBoards(state);
+        PrintGoals(state);
         Console.WriteLine();
     }
 
@@ -104,5 +105,30 @@ internal static class Renderer
             Console.Write($" {i}:{s}");
         }
         Console.WriteLine();
+    }
+
+    private static void PrintGoals(GameState state)
+    {
+        PrintPlayerGoals(state, state.Players[0], "Player 1 goals");
+        PrintPlayerGoals(state, state.Players[1], "Player 2 goals");
+    }
+
+    private static void PrintPlayerGoals(GameState state, Player player, string label)
+    {
+        Console.Write($"{label}: ");
+        if (player.GoalTiles.Count == 0)
+        {
+            Console.WriteLine("none");
+            return;
+        }
+
+        var formattedGoals = player.GoalTiles.Select(goal =>
+        {
+            var satisfied = GoalEvaluator.IsGoalSatisfied(state.Board, goal);
+            var marker = satisfied ? "✓" : "✗";
+            return $"{marker} {goal.Name}";
+        });
+
+        Console.WriteLine(string.Join(" | ", formattedGoals));
     }
 }

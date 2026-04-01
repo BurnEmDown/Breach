@@ -15,7 +15,7 @@ toward goals revealed by goal tiles (designed in a later phase).
 | Tiles                | 15    | 5 orange, 5 green, 5 purple; each tile has 1 color |
 | Player board         | 2     | One per player; holds 3 tiles each                  |
 | Agents               | 4     | 2 per player                                        |
-| Goal tiles           | TBD   | Added in a future phase                             |
+| Goal tiles           | 4 at start | 2 level-1 per player, drawn from level-1 pool |
 | Special action cards | TBD   | Added in a future phase                             |
 
 Each tile carries **1 color**.
@@ -31,9 +31,14 @@ Each tile carries **1 color**.
    - Upper-right side: (0,1), (0,2), (1,2)
    - Lower-left side:  (1,0), (2,0), (2,1)
    - Default spread: Green at (0,1), (0,2), (1,0) — Purple at (1,2), (2,0), (2,1)
-2. **Player boards:** Each player's 3 player-board tile slots start empty
-   (exact starting state TBD when player-board rules are finalized).
-3. **Agents:** Each player places their 2 agents on **opposing corners** of
+2. **Player boards:** Each player's 3 player-board tile slots start with
+   one tile of each color (O/G/P).
+3. **Goal tiles:** Each player starts with **2 random Level-1 goal tiles**.
+   - Level-1 goals require exactly 3 tiles.
+   - Goals are pattern-based (relative offsets), not fixed absolute board positions.
+   - A 3-in-a-row goal can complete on any row.
+   - A goal can never require 3 or more of the same color.
+4. **Agents:** Each player places their 2 agents on **opposing corners** of
    the 3×3 grid.
    - Player 1: top-left (0,0) and bottom-right (2,2)
    - Player 2: top-right (0,2) and bottom-left (2,0)
@@ -87,6 +92,13 @@ Breach.Tests — xUnit unit tests targeting Breach.Core
 **Value types / records**
 - `Position` — `(int Row, int Col)` for the 3×3 grid (0-indexed, Row 0 = top)
 - `Tile` — immutable record; `TileColor Color`
+- `GoalRequirementCell` — relative `(RowOffset, ColOffset)` + required `TileColor`
+
+**Goal model**
+- `GoalLevel` — `Level1 | Level2`
+- `GoalTile` — id/name/level + pattern requirements
+- `GoalValidation` — validates requirement count and color-frequency limits
+- `GoalEvaluator` — checks whether a goal pattern matches anywhere on the main board
 
 **Entities**
 - `Board` — 3×3 array of `Tile?`; exposes indexed access and orthogonal adjacency
@@ -107,6 +119,7 @@ Breach.Tests — xUnit unit tests targeting Breach.Core
 
 **Setup**
 - `GameSetup.CreateInitialState()` — returns the standard starting `GameState`
+- Assigns 2 random level-1 goals per player from a placeholder pool
 
 ### CLI (Breach.Cli)
 - ASCII renderer: prints 3×3 board with color abbreviations and agent markers
@@ -118,6 +131,9 @@ Breach.Tests — xUnit unit tests targeting Breach.Core
 - Each action: valid cases and invalid cases
 - AP surcharge rule (Move onto rival-occupied tile)
 - Turn transition and first-turn 1-AP rule
+- Goal setup validation (2 level-1 goals per player)
+- Goal validation rule (no goal with 3+ of same color)
+- Goal evaluator pattern matching (any row, row-only)
 
 ---
 
@@ -136,9 +152,12 @@ Breach.Tests — xUnit unit tests targeting Breach.Core
 - [ ] Command parser and game loop
 - [ ] Hot-seat play (two humans, one terminal)
 
-### Phase 3 — Goal tiles & win condition *(future)*
-- [ ] Design goal tile components and scoring
-- [ ] Integrate win-condition check into `GameEngine`
+### Phase 3 — Goal tiles & win condition *(in progress)*
+- [x] Add goal tile core types (`GoalLevel`, `GoalTile`, `GoalRequirementCell`)
+- [x] Add goal validation and evaluator infrastructure
+- [x] Assign 2 random level-1 goals per player at setup
+- [ ] Add level-2 goal pool and progression rules
+- [ ] Integrate scoring/win-condition check into `GameEngine`
 
 ### Phase 4 — Special action cards *(future)*
 - [ ] TBD

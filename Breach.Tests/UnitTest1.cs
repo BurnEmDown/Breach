@@ -209,3 +209,81 @@ public class OverrideActionTests
         Assert.False(result.IsSuccess);
     }
 }
+
+public class GoalSetupTests
+{
+    [Fact]
+    public void InitialState_EachPlayerStartsWithTwoLevel1Goals()
+    {
+        var state = GameSetup.CreateInitialState(randomSeed: 42);
+
+        foreach (var player in state.Players)
+        {
+            Assert.Equal(2, player.GoalTiles.Count);
+            Assert.All(player.GoalTiles, goal => Assert.Equal(GoalLevel.Level1, goal.Level));
+            Assert.All(player.GoalTiles, goal => Assert.Equal(3, goal.Requirements.Count));
+        }
+    }
+}
+
+public class GoalValidationTests
+{
+    [Fact]
+    public void Level1Goal_WithThreeOfSameColor_Throws()
+    {
+        var requirements = new[]
+        {
+            new GoalRequirementCell(0, 0, TileColor.Orange),
+            new GoalRequirementCell(0, 1, TileColor.Orange),
+            new GoalRequirementCell(0, 2, TileColor.Orange)
+        };
+
+        Assert.Throws<ArgumentException>(() =>
+            new GoalTile("BAD-L1", "Invalid Triple Orange", GoalLevel.Level1, requirements));
+    }
+}
+
+public class GoalEvaluatorTests
+{
+    [Fact]
+    public void GoalPattern_CanMatchAnyRow()
+    {
+        var board = new Board();
+        board[1, 0] = new Tile(TileColor.Orange);
+        board[1, 1] = new Tile(TileColor.Orange);
+        board[1, 2] = new Tile(TileColor.Green);
+
+        var goal = new GoalTile(
+            "L1-ROW-OOG",
+            "Row O-O-G",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Orange),
+                new GoalRequirementCell(0, 1, TileColor.Orange),
+                new GoalRequirementCell(0, 2, TileColor.Green)
+            ]);
+
+        Assert.True(GoalEvaluator.IsGoalSatisfied(board, goal));
+    }
+
+    [Fact]
+    public void GoalPattern_RowOnly_DoesNotMatchColumn()
+    {
+        var board = new Board();
+        board[0, 0] = new Tile(TileColor.Orange);
+        board[1, 0] = new Tile(TileColor.Orange);
+        board[2, 0] = new Tile(TileColor.Green);
+
+        var goal = new GoalTile(
+            "L1-ROW-OOG",
+            "Row O-O-G",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Orange),
+                new GoalRequirementCell(0, 1, TileColor.Orange),
+                new GoalRequirementCell(0, 2, TileColor.Green)
+            ]);
+
+        Assert.False(GoalEvaluator.IsGoalSatisfied(board, goal));
+    }
+}

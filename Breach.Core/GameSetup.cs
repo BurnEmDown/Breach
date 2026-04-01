@@ -6,6 +6,55 @@ namespace Breach.Core;
 /// </summary>
 public static class GameSetup
 {
+    private static readonly GoalTile[] Level1GoalPool =
+    [
+        new GoalTile(
+            "L1-ROW-OOG",
+            "Row O-O-G",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Orange),
+                new GoalRequirementCell(0, 1, TileColor.Orange),
+                new GoalRequirementCell(0, 2, TileColor.Green)
+            ]),
+        new GoalTile(
+            "L1-ROW-GGP",
+            "Row G-G-P",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Green),
+                new GoalRequirementCell(0, 1, TileColor.Green),
+                new GoalRequirementCell(0, 2, TileColor.Purple)
+            ]),
+        new GoalTile(
+            "L1-ROW-PPO",
+            "Row P-P-O",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Purple),
+                new GoalRequirementCell(0, 1, TileColor.Purple),
+                new GoalRequirementCell(0, 2, TileColor.Orange)
+            ]),
+        new GoalTile(
+            "L1-ROW-OGP",
+            "Row O-G-P",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Orange),
+                new GoalRequirementCell(0, 1, TileColor.Green),
+                new GoalRequirementCell(0, 2, TileColor.Purple)
+            ]),
+        new GoalTile(
+            "L1-ROW-GOP",
+            "Row G-O-P",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Green),
+                new GoalRequirementCell(0, 1, TileColor.Orange),
+                new GoalRequirementCell(0, 2, TileColor.Purple)
+            ])
+    ];
+
     // -----------------------------------------------------------------------
     // Tile factories
     // -----------------------------------------------------------------------
@@ -41,7 +90,7 @@ public static class GameSetup
     /// - Player One gets 1 AP on this first turn; Player Two waits
     /// </summary>
     /// <returns>A ready-to-play GameState.</returns>
-    public static GameState CreateInitialState()
+    public static GameState CreateInitialState(int? randomSeed = null)
     {
         var board = new Board();
 
@@ -80,6 +129,29 @@ public static class GameSetup
         player2.Board[1] = GreenTile();
         player2.Board[2] = PurpleTile();
 
+        var random = randomSeed.HasValue ? new Random(randomSeed.Value) : Random.Shared;
+        var goals = DrawRandomLevel1Goals(4, random);
+        player1.GoalTiles.Add(goals[0]);
+        player1.GoalTiles.Add(goals[1]);
+        player2.GoalTiles.Add(goals[2]);
+        player2.GoalTiles.Add(goals[3]);
+
         return new GameState(board, player1, player2, isFirstTurn: true);
+    }
+
+    private static GoalTile[] DrawRandomLevel1Goals(int count, Random random)
+    {
+        if (count > Level1GoalPool.Length)
+            throw new InvalidOperationException("Goal pool is too small for requested draw count.");
+
+        var pool = Level1GoalPool.ToArray();
+
+        for (var i = pool.Length - 1; i > 0; i--)
+        {
+            var j = random.Next(i + 1);
+            (pool[i], pool[j]) = (pool[j], pool[i]);
+        }
+
+        return pool.Take(count).ToArray();
     }
 }

@@ -20,6 +20,11 @@ public sealed class Player
     public PlayerBoard Board { get; }
 
     /// <summary>
+    /// This player's active goal tiles.
+    /// </summary>
+    public List<GoalTile> GoalTiles { get; }
+
+    /// <summary>
     /// Initializes a new player with two agents and an empty player board.
     /// </summary>
     /// <param name="id">The player's unique identifier.</param>
@@ -30,13 +35,15 @@ public sealed class Player
         Id     = id;
         Agents = [agent0, agent1];
         Board  = new PlayerBoard();
+        GoalTiles = [];
     }
 
-    private Player(PlayerId id, Agent[] agents, PlayerBoard board)
+    private Player(PlayerId id, Agent[] agents, PlayerBoard board, List<GoalTile> goalTiles)
     {
         Id     = id;
         Agents = agents;
         Board  = board;
+        GoalTiles = goalTiles;
     }
 
     /// <summary>
@@ -44,5 +51,5 @@ public sealed class Player
     /// This is typically used when cloning the entire game state.
     /// </summary>
     public Player Clone() =>
-        new(Id, [Agents[0].Clone(), Agents[1].Clone()], Board.Clone());
+        new(Id, [Agents[0].Clone(), Agents[1].Clone()], Board.Clone(), [.. GoalTiles]);
 }
