@@ -24,16 +24,16 @@ public class GameSetupTests
     {
         var state = GameSetup.CreateInitialState();
         Assert.Equal(TileColor.Green, state.Board[0, 1]!.Primary);
-        Assert.Equal(TileColor.Green, state.Board[0, 2]!.Primary);
-        Assert.Equal(TileColor.Green, state.Board[1, 0]!.Primary);
+        Assert.Equal(TileColor.Green, state.Board[1, 2]!.Primary);
+        Assert.Equal(TileColor.Green, state.Board[2, 0]!.Primary);
     }
 
     [Fact]
     public void InitialState_PurplePositions()
     {
         var state = GameSetup.CreateInitialState();
-        Assert.Equal(TileColor.Purple, state.Board[1, 2]!.Primary);
-        Assert.Equal(TileColor.Purple, state.Board[2, 0]!.Primary);
+        Assert.Equal(TileColor.Purple, state.Board[0, 2]!.Primary);
+        Assert.Equal(TileColor.Purple, state.Board[1, 0]!.Primary);
         Assert.Equal(TileColor.Purple, state.Board[2, 1]!.Primary);
     }
 
