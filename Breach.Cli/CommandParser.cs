@@ -3,24 +3,43 @@ using Breach.Core.Actions;
 
 namespace Breach.Cli;
 
+/// <summary>
+/// Result of parsing a player's command-line input. Contains either a valid
+/// <see cref="Action"/> ready for execution, or an <see cref="Error"/> message.
+/// </summary>
 internal sealed class ParseResult
 {
+    /// <summary>The parsed game action (null if parsing failed).</summary>
     public IGameAction? Action { get; }
+    
+    /// <summary>Error message if parsing failed (null if successful).</summary>
     public string?      Error  { get; }
 
+    /// <summary>Constructor for a successful parse result.</summary>
     public ParseResult(IGameAction action) { Action = action; }
+    
+    /// <summary>Constructor for a failed parse result.</summary>
     public ParseResult(string error)       { Error  = error;  }
 }
 
+/// <summary>
+/// Parses command-line input from the player and converts it into game actions.
+/// Handles: move, switch, override commands with proper validation and error reporting.
+/// </summary>
 internal static class CommandParser
 {
     /// <summary>
-    /// Parses a command string entered by the current player.
+    /// Parses a command string entered by the active player.
+    /// 
     /// Supported syntax:
-    ///   move &lt;agentIndex&gt; &lt;row&gt;,&lt;col&gt;
-    ///   switch
-    ///   override &lt;agentIndex&gt; &lt;slot&gt;
+    ///   move &lt;agentIndex&gt; &lt;row&gt;,&lt;col&gt;     — Move agent 0 or 1 to adjacent tile
+    ///   switch                      — Swap tiles under both agents
+    ///   override &lt;agentIndex&gt; &lt;slot&gt;     — Swap agent tile with player board
+    /// 
     /// </summary>
+    /// <param name="input">The raw command string.</param>
+    /// <param name="player">The current player (for validation).</param>
+    /// <returns>A ParseResult with either a valid action or an error message.</returns>
     public static ParseResult Parse(string input, PlayerId player)
     {
         var parts = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -36,6 +55,7 @@ internal static class CommandParser
         };
     }
 
+    /// <summary>Parses the "move" command: move &lt;agentIndex&gt; &lt;row&gt;,&lt;col&gt;</summary>
     private static ParseResult ParseMove(string[] parts, PlayerId player)
     {
         if (parts.Length != 3)
@@ -50,6 +70,7 @@ internal static class CommandParser
         return new ParseResult(new MoveAction(player, agentIdx, pos));
     }
 
+    /// <summary>Parses the "override" command: override &lt;agentIndex&gt; &lt;slot&gt;</summary>
     private static ParseResult ParseOverride(string[] parts, PlayerId player)
     {
         if (parts.Length != 3)
@@ -64,6 +85,10 @@ internal static class CommandParser
         return new ParseResult(new OverrideAction(player, agentIdx, slot));
     }
 
+    /// <summary>
+    /// Attempts to parse a position string in "row,col" format (e.g., "1,2").
+    /// Returns true if successful; false if format is invalid.
+    /// </summary>
     private static bool TryParsePosition(string s, out Position pos)
     {
         pos = default;

@@ -1,10 +1,12 @@
 namespace Breach.Core.Actions;
 
 /// <summary>
-/// Move one of the current player's agents to an orthogonally adjacent tile.
+/// Moves one of the current player's agents to an orthogonally adjacent tile.
+/// Costs 1 AP normally, or 2 AP if the target tile is occupied by a rival agent (surcharge).
+/// The agent can move up, down, left, or right, but not diagonally.
 /// </summary>
-/// <param name="Player">The acting player.</param>
-/// <param name="AgentIndex">0 or 1 — which of the player's agents to move.</param>
-/// <param name="Target">The destination position.</param>
+/// <param name="Player">The player performing the move.</param>
+/// <param name="AgentIndex">Which agent to move (0 or 1).</param>
+/// <param name="Target">The orthogonally adjacent destination position.</param>
 public sealed record MoveAction(PlayerId Player, int AgentIndex, Position Target)
     : IGameAction;

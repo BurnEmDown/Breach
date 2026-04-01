@@ -3,6 +3,11 @@ using Breach.Core.Actions;
 
 namespace Breach.Tests;
 
+/// <summary>
+/// Tests for <see cref="GameSetup.CreateInitialState"/>. Verifies that the
+/// standard starting board layout is correct, with proper tile placement
+/// and agent positions.
+/// </summary>
 public class GameSetupTests
 {
     [Fact]
@@ -60,6 +65,10 @@ public class GameSetupTests
     }
 }
 
+/// <summary>
+/// Tests for the Move action, covering valid moves, boundary checks,
+/// adjacency validation, and the rival-agent surcharge rule.
+/// </summary>
 public class MoveActionTests
 {
     private static GameEngine NewEngine() => new(GameSetup.CreateInitialState());
@@ -132,6 +141,7 @@ public class MoveActionTests
 
 public class SwitchActionTests
 {
+    /// <summary>Verifies that Switch correctly swaps the tiles under both agents.</summary>
     [Fact]
     public void Switch_SwapsTilesUnderAgents()
     {
@@ -159,8 +169,13 @@ public class SwitchActionTests
     }
 }
 
+/// <summary>
+/// Tests for the Override action, covering tile swaps between the board
+/// and player board, and validation of player board slots.
+/// </summary>
 public class OverrideActionTests
 {
+    /// <summary>Verifies that Override correctly swaps board and player-board tiles.</summary>
     [Fact]
     public void Override_SwapsBoardTileWithPlayerBoardTile()
     {
