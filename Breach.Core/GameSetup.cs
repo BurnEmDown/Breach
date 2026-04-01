@@ -36,7 +36,7 @@ public static class GameSetup
     /// Creates the standard starting game state for a new Breach game.
     /// Sets up:
     /// - Orange diagonal tiles at (0,0), (1,1), (2,2)
-    /// - Green tiles at (0,1), (0,2), (1,0) — 2 upper-right, 1 lower-left
+    /// - Green tiles at (0,1), (1,2), (1,0) — 2 upper-right, 1 lower-left
     /// - Purple tiles at (1,2), (2,0), (2,1) — 1 upper-right, 2 lower-left
     /// - Player 1 agents at (0,0) and (2,2) — opposing corners
     /// - Player 2 agents at (0,2) and (2,0) — opposing corners
@@ -55,12 +55,12 @@ public static class GameSetup
 
         // Green tiles (2 upper-right, 1 lower-left)
         board[0, 1] = GreenTile();
-        board[0, 2] = GreenTile();
-        board[1, 0] = GreenTile();
+        board[1, 2] = GreenTile();
+        board[2, 0] = GreenTile();
 
         // Purple tiles (1 upper-right, 2 lower-left)
-        board[1, 2] = PurpleTile();
-        board[2, 0] = PurpleTile();
+        board[0, 2] = PurpleTile();
+        board[1, 0] = PurpleTile();
         board[2, 1] = PurpleTile();
 
         // Players and agents
