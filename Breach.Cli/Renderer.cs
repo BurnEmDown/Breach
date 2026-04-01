@@ -52,7 +52,7 @@ internal static class Renderer
             {
                 var pos  = new Position(row, col);
                 var tile = state.Board[pos];
-                var s    = tile is null ? "   " : $"{tile.Primary.ToAbbrev()}{tile.Secondary1.ToAbbrev()}{tile.Secondary2.ToAbbrev()}";
+                var s    = tile is null ? "   " : tile.Color.ToAbbrev();
                 Console.Write($" {s,5} |");
             }
             Console.WriteLine();
@@ -93,14 +93,14 @@ internal static class Renderer
 
     /// <summary>
     /// Prints a single player's board slots (0-2) showing tiles or empty placeholders.
-    /// Format: "0:[OGP] 1:[ --- ] 2:[GPO]" etc.
+    /// Format: "0:[O] 1:[ --- ] 2:[G]" etc.
     /// </summary>
     private static void PrintPlayerBoard(PlayerBoard board)
     {
         for (var i = 0; i < PlayerBoard.Size; i++)
         {
             var tile = board[i];
-            var s    = tile is null ? "[ --- ]" : $"[{tile.Primary.ToAbbrev()}{tile.Secondary1.ToAbbrev()}{tile.Secondary2.ToAbbrev()}]";
+            var s    = tile is null ? "[ --- ]" : $"[{tile.Color.ToAbbrev()}]";
             Console.Write($" {i}:{s}");
         }
         Console.WriteLine();

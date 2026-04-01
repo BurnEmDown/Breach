@@ -12,14 +12,13 @@ toward goals revealed by goal tiles (designed in a later phase).
 | Component            | Count | Notes                                               |
 |----------------------|-------|-----------------------------------------------------|
 | Main board           | 1     | 3×3 grid, holds 9 tiles                             |
-| Tiles                | 15    | 5 orange, 5 green, 5 purple; each tile has 3 colors |
+| Tiles                | 15    | 5 orange, 5 green, 5 purple; each tile has 1 color |
 | Player board         | 2     | One per player; holds 3 tiles each                  |
 | Agents               | 4     | 2 per player                                        |
 | Goal tiles           | TBD   | Added in a future phase                             |
 | Special action cards | TBD   | Added in a future phase                             |
 
-Each tile carries **3 colors** (exact per-tile color distribution TBD; the
-primary color identifies which set the tile belongs to).
+Each tile carries **1 color**.
 
 ---
 
@@ -87,7 +86,7 @@ Breach.Tests — xUnit unit tests targeting Breach.Core
 
 **Value types / records**
 - `Position` — `(int Row, int Col)` for the 3×3 grid (0-indexed, Row 0 = top)
-- `Tile` — immutable record; `TileColor Primary`, `TileColor Secondary1`, `TileColor Secondary2`
+- `Tile` — immutable record; `TileColor Color`
 
 **Entities**
 - `Board` — 3×3 array of `Tile?`; exposes indexed access and orthogonal adjacency

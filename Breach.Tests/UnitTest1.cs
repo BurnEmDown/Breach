@@ -14,27 +14,27 @@ public class GameSetupTests
     public void InitialState_OrangeDiagonal()
     {
         var state = GameSetup.CreateInitialState();
-        Assert.Equal(TileColor.Orange, state.Board[0, 0]!.Primary);
-        Assert.Equal(TileColor.Orange, state.Board[1, 1]!.Primary);
-        Assert.Equal(TileColor.Orange, state.Board[2, 2]!.Primary);
+        Assert.Equal(TileColor.Orange, state.Board[0, 0]!.Color);
+        Assert.Equal(TileColor.Orange, state.Board[1, 1]!.Color);
+        Assert.Equal(TileColor.Orange, state.Board[2, 2]!.Color);
     }
 
     [Fact]
     public void InitialState_GreenPositions()
     {
         var state = GameSetup.CreateInitialState();
-        Assert.Equal(TileColor.Green, state.Board[0, 1]!.Primary);
-        Assert.Equal(TileColor.Green, state.Board[1, 2]!.Primary);
-        Assert.Equal(TileColor.Green, state.Board[2, 0]!.Primary);
+        Assert.Equal(TileColor.Green, state.Board[0, 1]!.Color);
+        Assert.Equal(TileColor.Green, state.Board[1, 2]!.Color);
+        Assert.Equal(TileColor.Green, state.Board[2, 0]!.Color);
     }
 
     [Fact]
     public void InitialState_PurplePositions()
     {
         var state = GameSetup.CreateInitialState();
-        Assert.Equal(TileColor.Purple, state.Board[0, 2]!.Primary);
-        Assert.Equal(TileColor.Purple, state.Board[1, 0]!.Primary);
-        Assert.Equal(TileColor.Purple, state.Board[2, 1]!.Primary);
+        Assert.Equal(TileColor.Purple, state.Board[0, 2]!.Color);
+        Assert.Equal(TileColor.Purple, state.Board[1, 0]!.Color);
+        Assert.Equal(TileColor.Purple, state.Board[2, 1]!.Color);
     }
 
     [Fact]

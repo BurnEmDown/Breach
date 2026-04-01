@@ -1,9 +1,8 @@
 namespace Breach.Core;
 
 /// <summary>
-/// Represents the three colors available in Breach. Each tile's primary color
-/// determines which set it belongs to (5 tiles per color). The orange diagonal
-/// forms the opening board layout.
+/// Represents the three colors available in Breach. Each tile has exactly one
+/// of these colors, with 5 tiles per color in the full game set.
 /// </summary>
 public enum TileColor
 {

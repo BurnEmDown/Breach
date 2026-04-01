@@ -11,22 +11,19 @@ public static class GameSetup
     // -----------------------------------------------------------------------
 
     /// <summary>
-    /// Creates an orange-primary tile with green and purple secondary colors.
-    /// Orange is used for the opening diagonal.
+    /// Creates an orange tile. Orange tiles are used for the opening diagonal.
     /// </summary>
-    public static Tile OrangeTile() => new(TileColor.Orange, TileColor.Green,  TileColor.Purple);
+    public static Tile OrangeTile() => new(TileColor.Orange);
     
     /// <summary>
-    /// Creates a green-primary tile with orange and purple secondary colors.
-    /// Green tiles are distributed 2 upper-right, 1 lower-left.
+    /// Creates a green tile. Green tiles are distributed 2 upper-right, 1 lower-left.
     /// </summary>
-    public static Tile GreenTile()  => new(TileColor.Green,  TileColor.Orange, TileColor.Purple);
+    public static Tile GreenTile()  => new(TileColor.Green);
     
     /// <summary>
-    /// Creates a purple-primary tile with orange and green secondary colors.
-    /// Purple tiles are distributed 1 upper-right, 2 lower-left.
+    /// Creates a purple tile. Purple tiles are distributed 1 upper-right, 2 lower-left.
     /// </summary>
-    public static Tile PurpleTile() => new(TileColor.Purple, TileColor.Orange, TileColor.Green);
+    public static Tile PurpleTile() => new(TileColor.Purple);
 
     // -----------------------------------------------------------------------
     // Initial state
