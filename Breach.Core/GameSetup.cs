@@ -18,40 +18,40 @@ public static class GameSetup
                 new GoalRequirementCell(0, 2, TileColor.Green)
             ]),
         new GoalTile(
-            "L1-ROW-GGP",
-            "Row G-G-P",
+            "L1-COL-GGP",
+            "Column G-G-P",
             GoalLevel.Level1,
             [
                 new GoalRequirementCell(0, 0, TileColor.Green),
-                new GoalRequirementCell(0, 1, TileColor.Green),
-                new GoalRequirementCell(0, 2, TileColor.Purple)
+                new GoalRequirementCell(1, 0, TileColor.Green),
+                new GoalRequirementCell(2, 0, TileColor.Purple)
             ]),
         new GoalTile(
-            "L1-ROW-PPO",
-            "Row P-P-O",
+            "L1-L-PPO",
+            "L P-P-O",
             GoalLevel.Level1,
             [
                 new GoalRequirementCell(0, 0, TileColor.Purple),
-                new GoalRequirementCell(0, 1, TileColor.Purple),
-                new GoalRequirementCell(0, 2, TileColor.Orange)
+                new GoalRequirementCell(1, 0, TileColor.Purple),
+                new GoalRequirementCell(1, 1, TileColor.Orange)
             ]),
         new GoalTile(
-            "L1-ROW-OGP",
-            "Row O-G-P",
+            "L1-CORNER-OGP",
+            "Corner O-G-P",
             GoalLevel.Level1,
             [
                 new GoalRequirementCell(0, 0, TileColor.Orange),
                 new GoalRequirementCell(0, 1, TileColor.Green),
-                new GoalRequirementCell(0, 2, TileColor.Purple)
+                new GoalRequirementCell(1, 1, TileColor.Purple)
             ]),
         new GoalTile(
-            "L1-ROW-GOP",
-            "Row G-O-P",
+            "L1-TRI-GOP",
+            "Triangle G-O-P",
             GoalLevel.Level1,
             [
                 new GoalRequirementCell(0, 0, TileColor.Green),
                 new GoalRequirementCell(0, 1, TileColor.Orange),
-                new GoalRequirementCell(0, 2, TileColor.Purple)
+                new GoalRequirementCell(1, 0, TileColor.Purple)
             ])
     ];
 
@@ -80,12 +80,14 @@ public static class GameSetup
 
     /// <summary>
     /// Creates the standard starting game state for a new Breach game.
-    /// Sets up:
-    /// - Orange diagonal tiles at (0,0), (1,1), (2,2)
-    /// - Green tiles at (0,1), (1,2), (1,0) — 2 upper-right, 1 lower-left
-    /// - Purple tiles at (1,2), (2,0), (2,1) — 1 upper-right, 2 lower-left
-    /// - Player 1 agents at (0,0) and (2,2) — opposing corners
-    /// - Player 2 agents at (0,2) and (2,0) — opposing corners
+    /// Sets up the board in a fixed pattern:
+    /// <code>
+    ///   P G O
+    ///   G O P
+    ///   O P G
+    /// </code>
+    /// - Player 1 agents at (0,0) and (2,2) — the non-orange corners (Purple, Green)
+    /// - Player 2 agents at (0,2) and (2,0) — the orange corners
     /// - Each player board starts with 1 orange, 1 green, 1 purple tile
     /// - Player One gets 1 AP on this first turn; Player Two waits
     /// </summary>
@@ -94,27 +96,29 @@ public static class GameSetup
     {
         var board = new Board();
 
-        // Orange diagonal
-        board[0, 0] = OrangeTile();
-        board[1, 1] = OrangeTile();
-        board[2, 2] = OrangeTile();
-
-        // Green tiles (2 upper-right, 1 lower-left)
+        // Row 0: P G O
+        board[0, 0] = PurpleTile();
         board[0, 1] = GreenTile();
-        board[1, 2] = GreenTile();
-        board[2, 0] = GreenTile();
+        board[0, 2] = OrangeTile();
 
-        // Purple tiles (1 upper-right, 2 lower-left)
-        board[0, 2] = PurpleTile();
-        board[1, 0] = PurpleTile();
+        // Row 1: G O P
+        board[1, 0] = GreenTile();
+        board[1, 1] = OrangeTile();
+        board[1, 2] = PurpleTile();
+
+        // Row 2: O P G
+        board[2, 0] = OrangeTile();
         board[2, 1] = PurpleTile();
+        board[2, 2] = GreenTile();
 
         // Players and agents
+        // Player 1 on non-orange corners: (0,0)=Purple, (2,2)=Green
         var player1 = new Player(
             PlayerId.One,
             new Agent(PlayerId.One, new Position(0, 0)),
             new Agent(PlayerId.One, new Position(2, 2)));
 
+        // Player 2 on orange corners: (0,2)=Orange, (2,0)=Orange
         var player2 = new Player(
             PlayerId.Two,
             new Agent(PlayerId.Two, new Position(0, 2)),

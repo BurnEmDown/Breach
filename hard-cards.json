@@ -1,0 +1,2826 @@
+{
+  "maxActions": 2,
+  "player1ReachableBoards": 16,
+  "player2ReachableBoards": 19,
+  "uniqueConnectedShapes": 18,
+  "totalValidLevel1Cards": 432,
+  "hardCardsCount": 128,
+  "hardCards": [
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 2,
+          "colOffset": 0,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "O",
+          "color": "Orange"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "G",
+          "color": "Green"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        }
+      ]
+    },
+    {
+      "shape": [
+        {
+          "rowOffset": 0,
+          "colOffset": 2,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 0,
+          "colorAbbrev": "P",
+          "color": "Purple"
+        },
+        {
+          "rowOffset": 1,
+          "colOffset": 1,
+          "colorAbbrev": "G",
+          "color": "Green"
+        }
+      ]
+    }
+  ]
+}

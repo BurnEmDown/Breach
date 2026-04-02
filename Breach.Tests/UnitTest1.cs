@@ -14,27 +14,27 @@ public class GameSetupTests
     public void InitialState_OrangeDiagonal()
     {
         var state = GameSetup.CreateInitialState();
-        Assert.Equal(TileColor.Orange, state.Board[0, 0]!.Color);
-        Assert.Equal(TileColor.Orange, state.Board[1, 1]!.Color);
-        Assert.Equal(TileColor.Orange, state.Board[2, 2]!.Color);
+        Assert.Equal(TileColor.Orange, state.Board[0, 2]!.Color); // top-right
+        Assert.Equal(TileColor.Orange, state.Board[1, 1]!.Color); // center
+        Assert.Equal(TileColor.Orange, state.Board[2, 0]!.Color); // bottom-left
     }
 
     [Fact]
     public void InitialState_GreenPositions()
     {
         var state = GameSetup.CreateInitialState();
-        Assert.Equal(TileColor.Green, state.Board[0, 1]!.Color);
-        Assert.Equal(TileColor.Green, state.Board[1, 2]!.Color);
-        Assert.Equal(TileColor.Green, state.Board[2, 0]!.Color);
+        Assert.Equal(TileColor.Green, state.Board[0, 1]!.Color); // row 0, col 1
+        Assert.Equal(TileColor.Green, state.Board[1, 0]!.Color); // row 1, col 0
+        Assert.Equal(TileColor.Green, state.Board[2, 2]!.Color); // row 2, col 2
     }
 
     [Fact]
     public void InitialState_PurplePositions()
     {
         var state = GameSetup.CreateInitialState();
-        Assert.Equal(TileColor.Purple, state.Board[0, 2]!.Color);
-        Assert.Equal(TileColor.Purple, state.Board[1, 0]!.Color);
-        Assert.Equal(TileColor.Purple, state.Board[2, 1]!.Color);
+        Assert.Equal(TileColor.Purple, state.Board[0, 0]!.Color); // row 0, col 0
+        Assert.Equal(TileColor.Purple, state.Board[1, 2]!.Color); // row 1, col 2
+        Assert.Equal(TileColor.Purple, state.Board[2, 1]!.Color); // row 2, col 1
     }
 
     [Fact]
@@ -241,6 +241,48 @@ public class GoalValidationTests
         Assert.Throws<ArgumentException>(() =>
             new GoalTile("BAD-L1", "Invalid Triple Orange", GoalLevel.Level1, requirements));
     }
+
+    [Fact]
+    public void Level1Goal_WithDisconnectedCells_Throws()
+    {
+        var requirements = new[]
+        {
+            new GoalRequirementCell(0, 0, TileColor.Orange),
+            new GoalRequirementCell(0, 2, TileColor.Green),
+            new GoalRequirementCell(2, 2, TileColor.Purple)
+        };
+
+        Assert.Throws<ArgumentException>(() =>
+            new GoalTile("BAD-L1-DISCONNECTED", "Invalid Disconnected", GoalLevel.Level1, requirements));
+    }
+
+    [Fact]
+    public void Level1Goal_OnMainDiagonal_Throws()
+    {
+        var requirements = new[]
+        {
+            new GoalRequirementCell(0, 0, TileColor.Orange),
+            new GoalRequirementCell(1, 1, TileColor.Green),
+            new GoalRequirementCell(2, 2, TileColor.Purple)
+        };
+
+        Assert.Throws<ArgumentException>(() =>
+            new GoalTile("BAD-L1-MAIN-DIAG", "Invalid Main Diagonal", GoalLevel.Level1, requirements));
+    }
+
+    [Fact]
+    public void Level1Goal_OnAntiDiagonal_Throws()
+    {
+        var requirements = new[]
+        {
+            new GoalRequirementCell(0, 2, TileColor.Orange),
+            new GoalRequirementCell(1, 1, TileColor.Green),
+            new GoalRequirementCell(2, 0, TileColor.Purple)
+        };
+
+        Assert.Throws<ArgumentException>(() =>
+            new GoalTile("BAD-L1-ANTI-DIAG", "Invalid Anti Diagonal", GoalLevel.Level1, requirements));
+    }
 }
 
 public class GoalEvaluatorTests
@@ -285,5 +327,69 @@ public class GoalEvaluatorTests
             ]);
 
         Assert.False(GoalEvaluator.IsGoalSatisfied(board, goal));
+    }
+
+    [Fact]
+    public void GoalPattern_CanMatchColumn()
+    {
+        var board = new Board();
+        board[0, 1] = new Tile(TileColor.Green);
+        board[1, 1] = new Tile(TileColor.Green);
+        board[2, 1] = new Tile(TileColor.Purple);
+
+        var goal = new GoalTile(
+            "L1-COL-GGP",
+            "Column G-G-P",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Green),
+                new GoalRequirementCell(1, 0, TileColor.Green),
+                new GoalRequirementCell(2, 0, TileColor.Purple)
+            ]);
+
+        Assert.True(GoalEvaluator.IsGoalSatisfied(board, goal));
+    }
+
+    [Fact]
+    public void GoalPattern_CanMatchTriangleShape()
+    {
+        var board = new Board();
+        board[0, 0] = new Tile(TileColor.Green);
+        board[0, 1] = new Tile(TileColor.Orange);
+        board[1, 0] = new Tile(TileColor.Purple);
+
+        var goal = new GoalTile(
+            "L1-TRI-GOP",
+            "Triangle G-O-P",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Green),
+                new GoalRequirementCell(0, 1, TileColor.Orange),
+                new GoalRequirementCell(1, 0, TileColor.Purple)
+            ]);
+
+        Assert.True(GoalEvaluator.IsGoalSatisfied(board, goal));
+    }
+
+    [Fact]
+    public void GoalPattern_ForPlayerTwo_IsCheckedFromRotatedPerspective()
+    {
+        var board = new Board();
+        board[0, 0] = new Tile(TileColor.Green);
+        board[0, 1] = new Tile(TileColor.Orange);
+        board[0, 2] = new Tile(TileColor.Purple);
+
+        var goal = new GoalTile(
+            "L1-ROW-POG",
+            "Row P-O-G",
+            GoalLevel.Level1,
+            [
+                new GoalRequirementCell(0, 0, TileColor.Purple),
+                new GoalRequirementCell(0, 1, TileColor.Orange),
+                new GoalRequirementCell(0, 2, TileColor.Green)
+            ]);
+
+        Assert.False(GoalEvaluator.IsGoalSatisfied(board, goal, PlayerId.One));
+        Assert.True(GoalEvaluator.IsGoalSatisfied(board, goal, PlayerId.Two));
     }
 }

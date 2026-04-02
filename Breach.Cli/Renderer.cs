@@ -124,7 +124,7 @@ internal static class Renderer
 
         var formattedGoals = player.GoalTiles.Select(goal =>
         {
-            var satisfied = GoalEvaluator.IsGoalSatisfied(state.Board, goal);
+            var satisfied = GoalEvaluator.IsGoalSatisfied(state.Board, goal, player.Id);
             var marker = satisfied ? "✓" : "✗";
             return $"{marker} {goal.Name}";
         });
