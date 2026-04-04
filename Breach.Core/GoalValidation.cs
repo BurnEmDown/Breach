@@ -52,12 +52,23 @@ public static class GoalValidation
                 "A Level1 goal cannot use all three tiles of either full board diagonal.",
                 nameof(requirements));
 
-        var colorCounts = requirements
-            .GroupBy(r => r.Color)
-            .ToDictionary(g => g.Key, g => g.Count());
+        var distinctColorCount = requirements
+            .Select(r => r.Color)
+            .Distinct()
+            .Count();
 
-        if (colorCounts.Values.Any(count => count >= 3))
-            throw new ArgumentException("A goal cannot require 3 or more of the same color.", nameof(requirements));
+        if (distinctColorCount < 2)
+            throw new ArgumentException("A goal must use at least two different colors.", nameof(requirements));
+
+        if (level == GoalLevel.Level1)
+        {
+            var colorCounts = requirements
+                .GroupBy(r => r.Color)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            if (colorCounts.Values.Any(count => count >= 3))
+                throw new ArgumentException("A Level1 goal cannot require 3 or more of the same color.", nameof(requirements));
+        }
     }
 
     private static bool IsForbiddenLevel1Diagonal(IReadOnlyList<GoalRequirementCell> requirements)

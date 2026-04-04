@@ -1,41 +1,132 @@
 using System.Text;
 using System.Text.Json;
+using Breach.Core;
 
-const int O = 1, G = 2, P = 3;
+const int maxActions = 2;
 
-int[] InitialBoard() => [3, 2, 1, 2, 1, 3, 1, 3, 2];
-int[] InitialPBoard() => [O, G, P];
+var initialState = GameSetup.CreateInitialState(randomSeed: 42);
+var initialBoard = CloneBoard(initialState.Board);
+var initialPlayerBoard = ClonePlayerBoard(initialState.Players[0].Board);
 
-static int Pos(int r, int c) => r * 3 + c;
-static (int r, int c) RC(int pos) => (pos / 3, pos % 3);
-static bool InBounds(int r, int c) => r is >= 0 and <= 2 && c is >= 0 and <= 2;
-static int[] CopyArray(int[] a) => (int[])a.Clone();
+var p1Boards = ReachableBoards(initialBoard, Pos(0, 0), Pos(2, 2), initialPlayerBoard, maxActions);
+var p2Boards = ReachableBoards(initialBoard, Pos(0, 2), Pos(2, 0), initialPlayerBoard, maxActions);
 
-static ulong EncodeState(int[] board, int a0, int a1, int[] pb)
+var allLevel1Goals = GoalCatalog.GenerateAllLevel1Goals();
+var allLevel2Goals = GoalCatalog.GenerateAllLevel2Goals();
+var hardLevel1Goals = allLevel1Goals
+    .Where(goal => !CanPlayerAchieveGoal(p1Boards, goal, PlayerId.One) && !CanPlayerAchieveGoal(p2Boards, goal, PlayerId.Two))
+    .OrderBy(goal => ShapeKey(goal.Requirements))
+    .ThenBy(goal => ColorKey(goal.Requirements))
+    .ToArray();
+
+Console.WriteLine($"Player 1 reachable boards within {maxActions} actions: {p1Boards.Count}");
+Console.WriteLine($"Player 2 reachable boards within {maxActions} actions: {p2Boards.Count}");
+Console.WriteLine($"Valid Level-1 goals: {allLevel1Goals.Count}");
+Console.WriteLine($"Hard Level-1 goals: {hardLevel1Goals.Length}");
+Console.WriteLine($"Valid Level-2 goals: {allLevel2Goals.Count}");
+Console.WriteLine();
+
+ExportGoalJson(
+    fileName: "hard-cards.json",
+    title: "Hard Level-1 Goal Cards",
+    maxActions,
+    p1Boards.Count,
+    p2Boards.Count,
+    totalGoals: hardLevel1Goals.Length,
+    goals: hardLevel1Goals);
+
+ExportGoalVisual(
+    fileName: "hard-cards-visual.txt",
+    title: "Hard Level-1 Goal Cards",
+    maxActions,
+    hardLevel1Goals);
+
+ExportGoalJson(
+    fileName: "level2-cards.json",
+    title: "All Level-2 Goal Cards",
+    maxActions: null,
+    player1ReachableBoards: null,
+    player2ReachableBoards: null,
+    totalGoals: allLevel2Goals.Count,
+    goals: allLevel2Goals);
+
+ExportGoalVisual(
+    fileName: "level2-cards-visual.txt",
+    title: "All Level-2 Goal Cards",
+    maxActions: null,
+    allLevel2Goals);
+
+Console.WriteLine("Exported hard cards JSON to hard-cards.json");
+Console.WriteLine("Exported hard cards visual text to hard-cards-visual.txt");
+Console.WriteLine("Exported Level-2 cards JSON to level2-cards.json");
+Console.WriteLine("Exported Level-2 cards visual text to level2-cards-visual.txt");
+
+static int Pos(int row, int col) => row * 3 + col;
+
+static TileColor?[] CloneBoard(Board board)
+{
+    var result = new TileColor?[9];
+    for (var row = 0; row < 3; row++)
+    for (var col = 0; col < 3; col++)
+        result[Pos(row, col)] = board[row, col]?.Color;
+    return result;
+}
+
+static TileColor?[] ClonePlayerBoard(PlayerBoard board)
+{
+    var result = new TileColor?[PlayerBoard.Size];
+    for (var i = 0; i < PlayerBoard.Size; i++)
+        result[i] = board[i]?.Color;
+    return result;
+}
+
+static ulong EncodeState(TileColor?[] board, int a0, int a1, TileColor?[] pb)
 {
     ulong s = 0;
-    for (var i = 0; i < 9; i++) s |= (ulong)(board[i] & 3) << (i * 2);
+    for (var i = 0; i < 9; i++) s |= (ulong)(EncodeColor(board[i]) & 3) << (i * 2);
     s |= (ulong)(a0 & 0xF) << 18;
     s |= (ulong)(a1 & 0xF) << 22;
-    for (var i = 0; i < 3; i++) s |= (ulong)(pb[i] & 3) << (26 + i * 2);
+    for (var i = 0; i < pb.Length; i++) s |= (ulong)(EncodeColor(pb[i]) & 3) << (26 + i * 2);
     return s;
 }
 
-static ulong BoardKey(int[] board)
+static ulong BoardKey(TileColor?[] board)
 {
     ulong s = 0;
-    for (var i = 0; i < 9; i++) s |= (ulong)(board[i] & 3) << (i * 2);
+    for (var i = 0; i < 9; i++) s |= (ulong)(EncodeColor(board[i]) & 3) << (i * 2);
     return s;
 }
 
-static int[] DecodeBoardKey(ulong key)
+static TileColor?[] DecodeBoardKey(ulong key)
 {
-    var board = new int[9];
-    for (var i = 0; i < 9; i++) board[i] = (int)((key >> (i * 2)) & 3);
+    var board = new TileColor?[9];
+    for (var i = 0; i < 9; i++) board[i] = DecodeColor((int)((key >> (i * 2)) & 3));
     return board;
 }
 
-static IEnumerable<(int[] board, int a0, int a1, int[] pb)> NextStates(int[] board, int a0, int a1, int[] pb)
+static int EncodeColor(TileColor? color) => color switch
+{
+    TileColor.Orange => 1,
+    TileColor.Green => 2,
+    TileColor.Purple => 3,
+    _ => 0
+};
+
+static TileColor? DecodeColor(int value) => value switch
+{
+    1 => TileColor.Orange,
+    2 => TileColor.Green,
+    3 => TileColor.Purple,
+    _ => null
+};
+
+static (int row, int col) RC(int pos) => (pos / 3, pos % 3);
+
+static bool InBounds(int row, int col) => row is >= 0 and <= 2 && col is >= 0 and <= 2;
+
+static TileColor?[] CopyArray(TileColor?[] a) => (TileColor?[])a.Clone();
+
+static IEnumerable<(TileColor?[] board, int a0, int a1, TileColor?[] pb)> NextStates(TileColor?[] board, int a0, int a1, TileColor?[] pb)
 {
     int[] dR = [-1, 1, 0, 0];
     int[] dC = [0, 0, -1, 1];
@@ -68,18 +159,18 @@ static IEnumerable<(int[] board, int a0, int a1, int[] pb)> NextStates(int[] boa
         yield return (nb, a0, a1, CopyArray(pb));
     }
 
-    for (var slot = 0; slot < 3; slot++)
+    for (var slot = 0; slot < pb.Length; slot++)
     {
-        if (pb[slot] == 0) continue;
+        if (pb[slot] is null) continue;
         var nb = CopyArray(board);
         var npb = CopyArray(pb);
         (nb[a0], npb[slot]) = (npb[slot], nb[a0]);
         yield return (nb, a0, a1, npb);
     }
 
-    for (var slot = 0; slot < 3; slot++)
+    for (var slot = 0; slot < pb.Length; slot++)
     {
-        if (pb[slot] == 0) continue;
+        if (pb[slot] is null) continue;
         var nb = CopyArray(board);
         var npb = CopyArray(pb);
         (nb[a1], npb[slot]) = (npb[slot], nb[a1]);
@@ -87,10 +178,10 @@ static IEnumerable<(int[] board, int a0, int a1, int[] pb)> NextStates(int[] boa
     }
 }
 
-static HashSet<ulong> ReachableBoards(int[] startBoard, int agentA, int agentB, int[] startPBoard, int maxDepth)
+static HashSet<ulong> ReachableBoards(TileColor?[] startBoard, int agentA, int agentB, TileColor?[] startPBoard, int maxDepth)
 {
     var reachableBoards = new HashSet<ulong>();
-    var queue = new Queue<(int[] board, int a0, int a1, int[] pb, int depth)>();
+    var queue = new Queue<(TileColor?[] board, int a0, int a1, TileColor?[] pb, int depth)>();
     var visited = new HashSet<ulong>();
 
     var board0 = CopyArray(startBoard);
@@ -116,147 +207,123 @@ static HashSet<ulong> ReachableBoards(int[] startBoard, int agentA, int agentB, 
     return reachableBoards;
 }
 
-static bool IsAdjacent((int r, int c) a, (int r, int c) b)
-{
-    if (a == b) return false;
-    return Math.Abs(a.r - b.r) <= 1 && Math.Abs(a.c - b.c) <= 1;
-}
-
-static (int r, int c)[] NormalizeShape(IEnumerable<(int r, int c)> cells)
-{
-    var arr = cells.OrderBy(x => x.r).ThenBy(x => x.c).ToArray();
-    var minR = arr.Min(x => x.r);
-    var minC = arr.Min(x => x.c);
-    return arr.Select(x => (x.r - minR, x.c - minC)).OrderBy(x => x.Item1).ThenBy(x => x.Item2).ToArray();
-}
-
-static ((int r, int c)[] shape, int[] colors) RotateCard180((int r, int c)[] shape, int[] colors)
-{
-    var minR = shape.Min(x => x.r);
-    var maxR = shape.Max(x => x.r);
-    var minC = shape.Min(x => x.c);
-    var maxC = shape.Max(x => x.c);
-
-    var rotated = shape
-        .Select((cell, i) => new
-        {
-            Cell = (r: maxR + minR - cell.r, c: maxC + minC - cell.c),
-            Color = colors[i]
-        })
-        .OrderBy(x => x.Cell.r)
-        .ThenBy(x => x.Cell.c)
-        .ToArray();
-
-    return (rotated.Select(x => x.Cell).ToArray(), rotated.Select(x => x.Color).ToArray());
-}
-
-static string ShapeKey((int r, int c)[] shape) => string.Join(";", shape.Select(x => $"{x.r},{x.c}"));
-
-static bool IsForbiddenLevel1DiagonalShape((int r, int c)[] shape)
-{
-    return ShapeKey(shape) is "0,0;1,1;2,2" or "0,2;1,1;2,0";
-}
-
-static bool EachCellHasNeighbor((int r, int c)[] shape)
-{
-    foreach (var cell in shape)
-    {
-        var hasNeighbor = shape.Any(other => IsAdjacent(cell, other));
-        if (!hasNeighbor) return false;
-    }
-
-    return true;
-}
-
-static List<(int r, int c)[]> GenerateConnectedShapes3()
-{
-    var allCells = (
-        from r in Enumerable.Range(0, 3)
-        from c in Enumerable.Range(0, 3)
-        select (r, c)
-    ).ToArray();
-
-    var unique = new Dictionary<string, (int r, int c)[]>();
-
-    for (var i = 0; i < allCells.Length; i++)
-    for (var j = i + 1; j < allCells.Length; j++)
-    for (var k = j + 1; k < allCells.Length; k++)
-    {
-        var shape = new[] { allCells[i], allCells[j], allCells[k] };
-        if (!EachCellHasNeighbor(shape)) continue;
-
-        var normalized = NormalizeShape(shape);
-        if (IsForbiddenLevel1DiagonalShape(normalized)) continue;
-
-        var key = ShapeKey(normalized);
-        unique.TryAdd(key, normalized);
-    }
-
-    return unique.Values.OrderBy(ShapeKey).ToList();
-}
-
-static bool GoalMatchesBoard(int[] board, (int r, int c)[] shape, int[] colors)
-{
-    var maxR = shape.Max(x => x.r);
-    var maxC = shape.Max(x => x.c);
-
-    for (var anchorR = 0; anchorR <= 2 - maxR; anchorR++)
-    {
-        for (var anchorC = 0; anchorC <= 2 - maxC; anchorC++)
-        {
-            var matches = true;
-            for (var i = 0; i < shape.Length; i++)
-            {
-                var r = anchorR + shape[i].r;
-                var c = anchorC + shape[i].c;
-                if (board[Pos(r, c)] != colors[i])
-                {
-                    matches = false;
-                    break;
-                }
-            }
-
-            if (matches) return true;
-        }
-    }
-
-    return false;
-}
-
-static bool GoalMatchesAnyBoard(HashSet<ulong> boardKeys, (int r, int c)[] shape, int[] colors)
+static bool CanPlayerAchieveGoal(HashSet<ulong> boardKeys, GoalTile goal, PlayerId playerId)
 {
     foreach (var key in boardKeys)
     {
-        var board = DecodeBoardKey(key);
-        if (GoalMatchesBoard(board, shape, colors))
+        var boardState = DecodeBoardKey(key);
+        var board = new Board();
+        for (var row = 0; row < 3; row++)
+        for (var col = 0; col < 3; col++)
+        {
+            var color = boardState[Pos(row, col)];
+            if (color is not null)
+                board[row, col] = new Tile(color.Value);
+        }
+
+        if (GoalEvaluator.IsGoalSatisfied(board, goal, playerId))
             return true;
     }
 
     return false;
 }
 
-static string ColorName(int c) => c switch { 1 => "O", 2 => "G", 3 => "P", _ => "?" };
+static string ShapeKey(IEnumerable<GoalRequirementCell> requirements) =>
+    string.Join(";", requirements.OrderBy(r => r.RowOffset).ThenBy(r => r.ColOffset).Select(r => $"{r.RowOffset},{r.ColOffset}"));
 
-static string FormatGoal((int r, int c)[] shape, int[] colors)
+static string ColorKey(IEnumerable<GoalRequirementCell> requirements) =>
+    string.Join(string.Empty, requirements.OrderBy(r => r.RowOffset).ThenBy(r => r.ColOffset).Select(r => r.Color.ToAbbrev()));
+
+static void ExportGoalJson(
+    string fileName,
+    string title,
+    int? maxActions,
+    int? player1ReachableBoards,
+    int? player2ReachableBoards,
+    int totalGoals,
+    IReadOnlyList<GoalTile> goals)
 {
-    var sb = new StringBuilder();
-    sb.Append("cells=");
-    sb.Append(string.Join(",", shape.Select((cell, i) => $"({cell.r},{cell.c})={ColorName(colors[i])}")));
-    return sb.ToString();
+    var jsonOutput = new
+    {
+        title,
+        maxActions,
+        player1ReachableBoards,
+        player2ReachableBoards,
+        totalGoals,
+        goals = goals.Select(goal => new
+        {
+            goal.Id,
+            goal.Name,
+            level = goal.Level.ToString(),
+            requirements = goal.Requirements.Select(r => new
+            {
+                r.RowOffset,
+                r.ColOffset,
+                colorAbbrev = r.Color.ToAbbrev(),
+                color = r.Color.ToString()
+            }).ToArray()
+        }).ToArray()
+    };
+
+    File.WriteAllText(fileName, JsonSerializer.Serialize(jsonOutput, new JsonSerializerOptions
+    {
+        WriteIndented = true
+    }));
 }
 
-static string RenderCardAscii((int r, int c)[] shape, int[] colors)
+static void ExportGoalVisual(string fileName, string title, int? maxActions, IReadOnlyList<GoalTile> goals)
 {
-    var height = shape.Max(cell => cell.r) + 1;
-    var width = shape.Max(cell => cell.c) + 1;
+    var orderedGoals = goals
+        .OrderBy(goal => ShapeKey(goal.Requirements))
+        .ThenBy(goal => ColorKey(goal.Requirements))
+        .ToArray();
+
+    var totalOrange = orderedGoals.Sum(goal => goal.Requirements.Count(r => r.Color == TileColor.Orange));
+    var totalGreen = orderedGoals.Sum(goal => goal.Requirements.Count(r => r.Color == TileColor.Green));
+    var totalPurple = orderedGoals.Sum(goal => goal.Requirements.Count(r => r.Color == TileColor.Purple));
+
+    var output = new StringBuilder();
+    output.AppendLine($"{title} ({orderedGoals.Length})");
+    if (maxActions.HasValue)
+        output.AppendLine($"Generated with maxActions={maxActions.Value}");
+    output.AppendLine($"Total color usage across all goals: O={totalOrange}, G={totalGreen}, P={totalPurple}");
+    output.AppendLine();
+
+    for (var i = 0; i < orderedGoals.Length; i++)
+    {
+        var goal = orderedGoals[i];
+        output.AppendLine($"Card {i + 1}");
+        output.AppendLine(goal.Name);
+        output.AppendLine($"id={goal.Id}");
+        output.AppendLine($"cells={string.Join(",", goal.Requirements.OrderBy(r => r.RowOffset).ThenBy(r => r.ColOffset).Select(r => $"({r.RowOffset},{r.ColOffset})={r.Color.ToAbbrev()}"))}");
+        output.AppendLine();
+        output.AppendLine("View:");
+        output.Append(RenderCardAscii(goal.Requirements));
+        output.AppendLine(new string('=', 48));
+        output.AppendLine();
+    }
+
+    File.WriteAllText(fileName, output.ToString());
+}
+
+static string RenderCardAscii(IReadOnlyList<GoalRequirementCell> requirements)
+{
+    var minRow = requirements.Min(r => r.RowOffset);
+    var minCol = requirements.Min(r => r.ColOffset);
+    var normalized = requirements
+        .Select(r => new GoalRequirementCell(r.RowOffset - minRow, r.ColOffset - minCol, r.Color))
+        .ToArray();
+
+    var height = normalized.Max(cell => cell.RowOffset) + 1;
+    var width = normalized.Max(cell => cell.ColOffset) + 1;
     var grid = new string[height, width];
 
     for (var row = 0; row < height; row++)
     for (var col = 0; col < width; col++)
         grid[row, col] = "   ";
 
-    for (var i = 0; i < shape.Length; i++)
-        grid[shape[i].r, shape[i].c] = $" {ColorName(colors[i])} ";
+    foreach (var requirement in normalized)
+        grid[requirement.RowOffset, requirement.ColOffset] = $" {requirement.Color.ToAbbrev()} ";
 
     var sb = new StringBuilder();
     sb.Append("     ");
@@ -277,127 +344,3 @@ static string RenderCardAscii((int r, int c)[] shape, int[] colors)
 
     return sb.ToString();
 }
-
-static object ToCardJson((int r, int c)[] shape, int[] colors)
-{
-    return new
-    {
-        shape = shape.Select((cell, i) => new
-        {
-            rowOffset = cell.r,
-            colOffset = cell.c,
-            colorAbbrev = ColorName(colors[i]),
-            color = colors[i] switch
-            {
-                O => "Orange",
-                G => "Green",
-                P => "Purple",
-                _ => "Unknown"
-            }
-        }).ToArray()
-    };
-}
-
-const int maxActions = 2;
-
-var initialBoard = InitialBoard();
-var initialPBoard = InitialPBoard();
-
-var p1Boards = ReachableBoards(initialBoard, Pos(0, 0), Pos(2, 2), initialPBoard, maxActions);
-var p2Boards = ReachableBoards(initialBoard, Pos(0, 2), Pos(2, 0), initialPBoard, maxActions);
-
-var shapes = GenerateConnectedShapes3();
-var colors = new[] { O, G, P };
-
-var allCards = new List<((int r, int c)[] shape, int[] colors)>();
-
-foreach (var shape in shapes)
-{
-    foreach (var c0 in colors)
-    foreach (var c1 in colors)
-    foreach (var c2 in colors)
-    {
-        var cardColors = new[] { c0, c1, c2 };
-        if (cardColors.Distinct().Count() < 2) continue;
-        allCards.Add((shape, cardColors));
-    }
-}
-
-var hardCards = new List<((int r, int c)[] shape, int[] colors)>();
-
-foreach (var card in allCards)
-{
-    var p1Can = GoalMatchesAnyBoard(p1Boards, card.shape, card.colors);
-    var rotatedForPlayerTwo = RotateCard180(card.shape, card.colors);
-    var p2Can = GoalMatchesAnyBoard(p2Boards, rotatedForPlayerTwo.shape, rotatedForPlayerTwo.colors);
-
-    if (!p1Can && !p2Can)
-        hardCards.Add(card);
-}
-
-Console.WriteLine($"Player 1 reachable boards within {maxActions} actions: {p1Boards.Count}");
-Console.WriteLine($"Player 2 reachable boards within {maxActions} actions: {p2Boards.Count}");
-Console.WriteLine($"Unique connected 3-cell shapes (normalized): {shapes.Count}");
-Console.WriteLine($"Total valid level-1 cards (shape × colors with >=2 colors): {allCards.Count}");
-Console.WriteLine($"Hard cards (neither player can achieve in <= {maxActions} actions): {hardCards.Count}");
-Console.WriteLine();
-
-foreach (var card in hardCards.OrderBy(x => ShapeKey(x.shape)).ThenBy(x => string.Join("", x.colors.Select(ColorName))))
-{
-    Console.WriteLine(FormatGoal(card.shape, card.colors));
-}
-
-var jsonOutput = new
-{
-    maxActions,
-    player1ReachableBoards = p1Boards.Count,
-    player2ReachableBoards = p2Boards.Count,
-    uniqueConnectedShapes = shapes.Count,
-    totalValidLevel1Cards = allCards.Count,
-    hardCardsCount = hardCards.Count,
-    hardCards = hardCards
-        .OrderBy(x => ShapeKey(x.shape))
-        .ThenBy(x => string.Join("", x.colors.Select(ColorName)))
-        .Select(card => ToCardJson(card.shape, card.colors))
-        .ToArray()
-};
-
-var json = JsonSerializer.Serialize(jsonOutput, new JsonSerializerOptions
-{
-    WriteIndented = true
-});
-
-File.WriteAllText("hard-cards.json", json);
-
-var visualOutput = new StringBuilder();
-var totalOrange = hardCards.Sum(card => card.colors.Count(color => color == O));
-var totalGreen = hardCards.Sum(card => card.colors.Count(color => color == G));
-var totalPurple = hardCards.Sum(card => card.colors.Count(color => color == P));
-
-visualOutput.AppendLine($"Hard Level-1 Goal Cards ({hardCards.Count})");
-visualOutput.AppendLine($"Generated with maxActions={maxActions}");
-visualOutput.AppendLine($"Total color usage across all hard goals: O={totalOrange}, G={totalGreen}, P={totalPurple}");
-visualOutput.AppendLine();
-
-var orderedHardCards = hardCards
-    .OrderBy(x => ShapeKey(x.shape))
-    .ThenBy(x => string.Join("", x.colors.Select(ColorName)))
-    .ToList();
-
-for (var i = 0; i < orderedHardCards.Count; i++)
-{
-    var card = orderedHardCards[i];
-
-    visualOutput.AppendLine($"Card {i + 1}");
-    visualOutput.AppendLine(FormatGoal(card.shape, card.colors));
-    visualOutput.AppendLine();
-    visualOutput.AppendLine("View:");
-    visualOutput.Append(RenderCardAscii(card.shape, card.colors));
-    visualOutput.AppendLine(new string('=', 48));
-    visualOutput.AppendLine();
-}
-
-File.WriteAllText("hard-cards-visual.txt", visualOutput.ToString());
-Console.WriteLine();
-Console.WriteLine("Exported hard cards JSON to hard-cards.json");
-Console.WriteLine("Exported hard cards visual text to hard-cards-visual.txt");

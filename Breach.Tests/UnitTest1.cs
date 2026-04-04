@@ -224,6 +224,16 @@ public class GoalSetupTests
             Assert.All(player.GoalTiles, goal => Assert.Equal(3, goal.Requirements.Count));
         }
     }
+
+    [Fact]
+    public void GoalCatalog_GeneratesLevel2Goals()
+    {
+        var goals = GameSetup.GetAllLevel2Goals();
+
+        Assert.NotEmpty(goals);
+        Assert.All(goals, goal => Assert.Equal(GoalLevel.Level2, goal.Level));
+        Assert.All(goals, goal => Assert.Equal(4, goal.Requirements.Count));
+    }
 }
 
 public class GoalValidationTests
@@ -282,6 +292,36 @@ public class GoalValidationTests
 
         Assert.Throws<ArgumentException>(() =>
             new GoalTile("BAD-L1-ANTI-DIAG", "Invalid Anti Diagonal", GoalLevel.Level1, requirements));
+    }
+
+    [Fact]
+    public void Level2Goal_WithThreeOfSameColor_IsAllowed()
+    {
+        var requirements = new[]
+        {
+            new GoalRequirementCell(0, 0, TileColor.Orange),
+            new GoalRequirementCell(0, 1, TileColor.Orange),
+            new GoalRequirementCell(1, 0, TileColor.Orange),
+            new GoalRequirementCell(1, 1, TileColor.Green)
+        };
+
+        var goal = new GoalTile("L2-VALID", "Level2 Triple Orange", GoalLevel.Level2, requirements);
+        Assert.Equal(4, goal.Requirements.Count);
+    }
+
+    [Fact]
+    public void Level2Goal_WithSingleColor_Throws()
+    {
+        var requirements = new[]
+        {
+            new GoalRequirementCell(0, 0, TileColor.Purple),
+            new GoalRequirementCell(0, 1, TileColor.Purple),
+            new GoalRequirementCell(1, 0, TileColor.Purple),
+            new GoalRequirementCell(1, 1, TileColor.Purple)
+        };
+
+        Assert.Throws<ArgumentException>(() =>
+            new GoalTile("BAD-L2", "Invalid Single Color", GoalLevel.Level2, requirements));
     }
 }
 

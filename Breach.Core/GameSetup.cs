@@ -6,54 +6,8 @@ namespace Breach.Core;
 /// </summary>
 public static class GameSetup
 {
-    private static readonly GoalTile[] Level1GoalPool =
-    [
-        new GoalTile(
-            "L1-ROW-OOG",
-            "Row O-O-G",
-            GoalLevel.Level1,
-            [
-                new GoalRequirementCell(0, 0, TileColor.Orange),
-                new GoalRequirementCell(0, 1, TileColor.Orange),
-                new GoalRequirementCell(0, 2, TileColor.Green)
-            ]),
-        new GoalTile(
-            "L1-COL-GGP",
-            "Column G-G-P",
-            GoalLevel.Level1,
-            [
-                new GoalRequirementCell(0, 0, TileColor.Green),
-                new GoalRequirementCell(1, 0, TileColor.Green),
-                new GoalRequirementCell(2, 0, TileColor.Purple)
-            ]),
-        new GoalTile(
-            "L1-L-PPO",
-            "L P-P-O",
-            GoalLevel.Level1,
-            [
-                new GoalRequirementCell(0, 0, TileColor.Purple),
-                new GoalRequirementCell(1, 0, TileColor.Purple),
-                new GoalRequirementCell(1, 1, TileColor.Orange)
-            ]),
-        new GoalTile(
-            "L1-CORNER-OGP",
-            "Corner O-G-P",
-            GoalLevel.Level1,
-            [
-                new GoalRequirementCell(0, 0, TileColor.Orange),
-                new GoalRequirementCell(0, 1, TileColor.Green),
-                new GoalRequirementCell(1, 1, TileColor.Purple)
-            ]),
-        new GoalTile(
-            "L1-TRI-GOP",
-            "Triangle G-O-P",
-            GoalLevel.Level1,
-            [
-                new GoalRequirementCell(0, 0, TileColor.Green),
-                new GoalRequirementCell(0, 1, TileColor.Orange),
-                new GoalRequirementCell(1, 0, TileColor.Purple)
-            ])
-    ];
+    private static readonly GoalTile[] Level1GoalPool = GoalCatalog.GenerateAllLevel1Goals().ToArray();
+    private static readonly GoalTile[] Level2GoalPool = GoalCatalog.GenerateAllLevel2Goals().ToArray();
 
     // -----------------------------------------------------------------------
     // Tile factories
@@ -145,10 +99,24 @@ public static class GameSetup
 
     private static GoalTile[] DrawRandomLevel1Goals(int count, Random random)
     {
-        if (count > Level1GoalPool.Length)
+        return DrawRandomGoals(Level1GoalPool, count, random);
+    }
+
+    private static GoalTile[] DrawRandomLevel2Goals(int count, Random random)
+    {
+        return DrawRandomGoals(Level2GoalPool, count, random);
+    }
+
+    public static IReadOnlyList<GoalTile> GetAllLevel1Goals() => Level1GoalPool;
+
+    public static IReadOnlyList<GoalTile> GetAllLevel2Goals() => Level2GoalPool;
+
+    private static GoalTile[] DrawRandomGoals(GoalTile[] poolSource, int count, Random random)
+    {
+        if (count > poolSource.Length)
             throw new InvalidOperationException("Goal pool is too small for requested draw count.");
 
-        var pool = Level1GoalPool.ToArray();
+        var pool = poolSource.ToArray();
 
         for (var i = pool.Length - 1; i > 0; i--)
         {

@@ -1,2822 +1,3205 @@
 {
+  "title": "Hard Level-1 Goal Cards",
   "maxActions": 2,
   "player1ReachableBoards": 16,
   "player2ReachableBoards": 19,
-  "uniqueConnectedShapes": 18,
-  "totalValidLevel1Cards": 432,
-  "hardCardsCount": 128,
-  "hardCards": [
+  "totalGoals": 128,
+  "goals": [
     {
-      "shape": [
+      "Id": "L1-00-01-02-PGG",
+      "Name": "Level1 P-G-G [(0,0), (0,1), (0,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-02-PPG",
+      "Name": "Level1 P-P-G [(0,0), (0,1), (0,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-10-GGO",
+      "Name": "Level1 G-G-O [(0,0), (0,1), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-10-GOG",
+      "Name": "Level1 G-O-G [(0,0), (0,1), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-11-GGP",
+      "Name": "Level1 G-G-P [(0,0), (0,1), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-11-GPG",
+      "Name": "Level1 G-P-G [(0,0), (0,1), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-11-GPP",
+      "Name": "Level1 G-P-P [(0,0), (0,1), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-11-PGP",
+      "Name": "Level1 P-G-P [(0,0), (0,1), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-GGO",
+      "Name": "Level1 G-G-O [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-OGG",
+      "Name": "Level1 O-G-G [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-OGO",
+      "Name": "Level1 O-G-O [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-OPG",
+      "Name": "Level1 O-P-G [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-OPO",
+      "Name": "Level1 O-P-O [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-OPP",
+      "Name": "Level1 O-P-P [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-POO",
+      "Name": "Level1 P-O-O [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-PPG",
+      "Name": "Level1 P-P-G [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-01-12-PPO",
+      "Name": "Level1 P-P-O [(0,0), (0,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-GOG",
+      "Name": "Level1 G-O-G [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-OGO",
+      "Name": "Level1 O-G-O [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-OGP",
+      "Name": "Level1 O-G-P [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-OOG",
+      "Name": "Level1 O-O-G [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-OOP",
+      "Name": "Level1 O-O-P [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-OPG",
+      "Name": "Level1 O-P-G [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-OPO",
+      "Name": "Level1 O-P-O [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-POP",
+      "Name": "Level1 P-O-P [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-02-11-PPO",
+      "Name": "Level1 P-P-O [(0,0), (0,2), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-11-GGP",
+      "Name": "Level1 G-G-P [(0,0), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-11-GPG",
+      "Name": "Level1 G-P-G [(0,0), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-11-GPP",
+      "Name": "Level1 G-P-P [(0,0), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-11-PGP",
+      "Name": "Level1 P-G-P [(0,0), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-20-PGG",
+      "Name": "Level1 P-G-G [(0,0), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-20-PPG",
+      "Name": "Level1 P-P-G [(0,0), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-GGO",
+      "Name": "Level1 G-G-O [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-OGG",
+      "Name": "Level1 O-G-G [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-OGO",
+      "Name": "Level1 O-G-O [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-OPG",
+      "Name": "Level1 O-P-G [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-OPO",
+      "Name": "Level1 O-P-O [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-OPP",
+      "Name": "Level1 O-P-P [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-POO",
+      "Name": "Level1 P-O-O [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-PPG",
+      "Name": "Level1 P-P-G [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-10-21-PPO",
+      "Name": "Level1 P-P-O [(0,0), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-GGO",
+      "Name": "Level1 G-G-O [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-OGG",
+      "Name": "Level1 O-G-G [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-OGO",
+      "Name": "Level1 O-G-O [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-OOG",
+      "Name": "Level1 O-O-G [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-OPO",
+      "Name": "Level1 O-P-O [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-OPP",
+      "Name": "Level1 O-P-P [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-PGG",
+      "Name": "Level1 P-G-G [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-PGO",
+      "Name": "Level1 P-G-O [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-12-PPO",
+      "Name": "Level1 P-P-O [(0,0), (1,1), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-GGO",
+      "Name": "Level1 G-G-O [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-OGO",
+      "Name": "Level1 O-G-O [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-OGP",
+      "Name": "Level1 O-G-P [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-OOG",
+      "Name": "Level1 O-O-G [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-OOP",
+      "Name": "Level1 O-O-P [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-OPG",
+      "Name": "Level1 O-P-G [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-OPO",
+      "Name": "Level1 O-P-O [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-POP",
+      "Name": "Level1 P-O-P [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-20-PPO",
+      "Name": "Level1 P-P-O [(0,0), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-GGO",
+      "Name": "Level1 G-G-O [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-OGG",
+      "Name": "Level1 O-G-G [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-OGO",
+      "Name": "Level1 O-G-O [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-OOG",
+      "Name": "Level1 O-O-G [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-OPO",
+      "Name": "Level1 O-P-O [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-OPP",
+      "Name": "Level1 O-P-P [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-PGG",
+      "Name": "Level1 P-G-G [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-PGO",
+      "Name": "Level1 P-G-O [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-00-11-21-PPO",
+      "Name": "Level1 P-P-O [(0,0), (1,1), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 0,
+          "RowOffset": 0,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-GGO",
+      "Name": "Level1 G-G-O [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-GGP",
+      "Name": "Level1 G-G-P [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-GPG",
+      "Name": "Level1 G-P-G [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-GPO",
+      "Name": "Level1 G-P-O [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-GPP",
+      "Name": "Level1 G-P-P [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-OPG",
+      "Name": "Level1 O-P-G [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-OPP",
+      "Name": "Level1 O-P-P [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-PGG",
+      "Name": "Level1 P-G-G [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-PGO",
+      "Name": "Level1 P-G-O [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-02-10-PPG",
+      "Name": "Level1 P-P-G [(0,1), (0,2), (1,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-11-OPP",
+      "Name": "Level1 O-P-P [(0,1), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-11-POP",
+      "Name": "Level1 P-O-P [(0,1), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-GOG",
+      "Name": "Level1 G-O-G [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-GOO",
+      "Name": "Level1 G-O-O [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-GPO",
+      "Name": "Level1 G-P-O [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-OGG",
+      "Name": "Level1 O-G-G [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-OGO",
+      "Name": "Level1 O-G-O [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-OPO",
+      "Name": "Level1 O-P-O [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-PGO",
+      "Name": "Level1 P-G-O [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-POO",
+      "Name": "Level1 P-O-O [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-12-POP",
+      "Name": "Level1 P-O-P [(0,1), (1,0), (1,2)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 2,
+          "RowOffset": 1,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-GGP",
+      "Name": "Level1 G-G-P [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-GOP",
+      "Name": "Level1 G-O-P [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-GPG",
+      "Name": "Level1 G-P-G [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-GPP",
+      "Name": "Level1 G-P-P [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-OGG",
+      "Name": "Level1 O-G-G [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-OGP",
+      "Name": "Level1 O-G-P [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-OPG",
+      "Name": "Level1 O-P-G [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-PGG",
+      "Name": "Level1 P-G-G [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-PGP",
+      "Name": "Level1 P-G-P [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-20-POP",
+      "Name": "Level1 P-O-P [(0,1), (1,0), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-GOG",
+      "Name": "Level1 G-O-G [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-GOO",
+      "Name": "Level1 G-O-O [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-GPO",
+      "Name": "Level1 G-P-O [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-OGG",
+      "Name": "Level1 O-G-G [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-OGO",
+      "Name": "Level1 O-G-O [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-OPO",
+      "Name": "Level1 O-P-O [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-OPP",
+      "Name": "Level1 O-P-P [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-PGO",
+      "Name": "Level1 P-G-O [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-10-21-POO",
+      "Name": "Level1 P-O-O [(0,1), (1,0), (2,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 1,
+          "RowOffset": 2,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-GGP",
+      "Name": "Level1 G-G-P [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-GOG",
+      "Name": "Level1 G-O-G [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-GOP",
+      "Name": "Level1 G-O-P [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-GPG",
+      "Name": "Level1 G-P-G [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-GPO",
+      "Name": "Level1 G-P-O [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-GPP",
+      "Name": "Level1 G-P-P [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-PGO",
+      "Name": "Level1 P-G-O [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-PGP",
+      "Name": "Level1 P-G-P [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-PPG",
+      "Name": "Level1 P-P-G [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-01-11-20-PPO",
+      "Name": "Level1 P-P-O [(0,1), (1,1), (2,0)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 1,
+          "RowOffset": 0,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 2,
-          "colOffset": 0,
+          "RowOffset": 2,
+          "ColOffset": 0,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-GGO",
+      "Name": "Level1 G-G-O [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-GGP",
+      "Name": "Level1 G-G-P [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-GPP",
+      "Name": "Level1 G-P-P [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-OGP",
+      "Name": "Level1 O-G-P [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-OPG",
+      "Name": "Level1 O-P-G [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-OPP",
+      "Name": "Level1 O-P-P [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "O",
           "color": "Orange"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-PGG",
+      "Name": "Level1 P-G-G [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-PGO",
+      "Name": "Level1 P-G-O [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "O",
           "color": "Orange"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-PGP",
+      "Name": "Level1 P-G-P [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "G",
           "color": "Green"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "P",
           "color": "Purple"
         }
       ]
     },
     {
-      "shape": [
+      "Id": "L1-02-10-11-PPG",
+      "Name": "Level1 P-P-G [(0,2), (1,0), (1,1)]",
+      "level": "Level1",
+      "requirements": [
         {
-          "rowOffset": 0,
-          "colOffset": 2,
+          "RowOffset": 0,
+          "ColOffset": 2,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 0,
+          "RowOffset": 1,
+          "ColOffset": 0,
           "colorAbbrev": "P",
           "color": "Purple"
         },
         {
-          "rowOffset": 1,
-          "colOffset": 1,
+          "RowOffset": 1,
+          "ColOffset": 1,
           "colorAbbrev": "G",
           "color": "Green"
         }
